@@ -31,7 +31,7 @@ const VerProdutos = () => {
               marca={prod.marca}
               tamanho={prod.tamanho}
               medida={prod.medida}
-              imagem={prod.imagemUrl}
+              imagemUrl={prod.imagemUrl}
              /> 
             ) 
           )) 

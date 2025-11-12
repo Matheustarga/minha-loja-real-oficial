@@ -86,3 +86,49 @@ export function useListaProdutos(){
 return produtos
 
 }
+//U       -----         11/11/2025
+//Hook para buscar informações de um produto específico
+export function useBuscarProdutoPorId(){
+  //Recebe o id do produto e busca as informações 
+  const buscarProdutoPorID = async (idProduto) => {
+    const req = await fetch(`${url}/produtos/${idProduto}`)
+    const res = await req.json()
+    console.log("Produto encontrado: ", res);
+    return res        
+  }
+  return { buscarProdutoPorID }
+}
+
+
+//Hook para atualizar um produto
+export function useAtualizarProdutos(){
+  //Envia os dados novos, para o produto específico
+  const atualizarProduto = async (data, idProduto) => {
+    const req = await fetch(`${url}/produtos/${idProduto}`,{
+      method:"PUT",
+      headers: {"Content-type": "application/json"},
+      body: JSON.stringify(data)
+    })
+    const res = await req.json()
+    return res
+  }
+  return { atualizarProduto }
+
+
+}
+
+
+
+//D       -----         11/11/2025
+export function useDeletaProduto(){
+  //recebe o id do produto e requisita a api a exclusão
+  const deletarProduto = async (idProduto) => {
+    const req = await fetch(`${url}/produtos/${idProduto}`, {
+      method:"DELETE"
+    })
+    const res = await req.json()
+    //retorna o produto deletado
+    return res
+  }
+  return { deletarProduto }
+}

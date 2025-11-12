@@ -42,19 +42,19 @@
       "imagemUrl": "https://assets.unileversolutions.com/v1/1207153.jpg"
     },
     {
-      "id": "3049",
-      "sku": "789100100",
-      "nome": "Arroz Branco 5Kg",
-      "descricao": "Arroz branco tipo 1, pacote de 5Kg.",
+      "id": "7cc2",
+      "sku": "123",
+      "nome": "Coquinha",
+      "descricao": "Geladinha",
       "categoria": "Saúde e Beleza",
-      "marca": "Tio João",
-      "fornecedor": "Cafu",
-      "quantidade": "2",
-      "tamanho": "3",
-      "medida": "mL",
-      "precoCusto": "12",
-      "precoVenda": "23",
-      "imagemUrl": "https://d3jdy5kagtp3z4.cloudfront.net/files/eventos/378377/e5d778b02a92af5d0945f2c9b463011f.png"
+      "marca": "coca-cola",
+      "fornecedor": "Escobar",
+      "quantidade": "50",
+      "tamanho": "1",
+      "medida": "L",
+      "precoCusto": "10",
+      "precoVenda": "15",
+      "imagemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Coca_Cola_Flasche_-_Original_Taste.jpg/960px-Coca_Cola_Flasche_-_Original_Taste.jpg"
     }
   ],
   "categorias": [

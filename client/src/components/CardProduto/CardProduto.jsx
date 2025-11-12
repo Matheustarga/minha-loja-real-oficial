@@ -3,18 +3,29 @@ import Card from "react-bootstrap/Card"
 import Button from "react-bootstrap/Button"
 //Importando o link para transferencia de página
 import { Link } from "react-router-dom"
+//Importando o hook de deletar produtos 11/11/2025
+import { useDeletaProduto } from "../../hooks/useProdutos"
 
 const CardProduto = (props) => {
 
-    // Função para lidar com o delete
-    const handleDelete = () => {}
+    //importando a função de deletar produto 11/11/2025
+    const {deletarProduto} = useDeletaProduto()
+
+    // Função para lidar com o delete 11/11/2025
+    const handleDelete = async () => {
+      if(confirm(`Deseja realmente excluir o produto ${props.nome} ?`)){
+        const deletado = await deletarProduto(props.id)
+        alert(`Produto ${props.nome} deletado com sucesso!`)
+        window.location.reload()
+      }
+    }
 
 
   return (
     <div>
       <Card className="text-center" style={{width:"17rem", height:"35rem"}}>
         {/* Imagem do card */}
-        <Card.Img variant="top" height="200px" src={props.imagemUrl != null ? props.imagemUrl : "Imagem padrão(produto sem imagem)"}> 
+        <Card.Img variant="top" height="200px" src={props.imagemUrl != null ? props.imagemUrl : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8lRbS7eKYzDq-Ftxc1p8G_TTw2unWBMEYUw&s"}> 
 
         </Card.Img>
         <Card.Body>
